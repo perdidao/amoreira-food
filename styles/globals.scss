@@ -1,22 +1,71 @@
-*{
+:root {
+  // Colors
+  --primary: #c33;
+  --secondary: #3cc;
+  --title: #212121;
+  --text: #444;
+  --gray: #999;
+  --silver: #ccc;
+  --washed: #eee;
+
+  // Font sizes
+  --size-xxxs: 0.4rem;
+  --size-xxs: 0.5rem;
+  --size-xs: 0.6rem;
+  --size-sm: 0.8rem;
+  --size-md: 1rem;
+  --size-lg: 1.2rem;
+  --size-xl: 1.4rem;
+  --size-xxl: 1.5rem;
+  --size-xxxl: 1.6rem;
+
+  // Font weights
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  // Spacing
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+  --spacing-xl: 80px;
+  --spacing-xxl: 100px;
+  --spacing-xxxl: 160px;
+
+  // Media sizes
+  --media-mobile: 768px;
+  --media-tablet: 1024px;
+  --media-notebook: 1440px;
+  --media-desktop: 1920px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+* {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  color: var(--text);
 }
 
 a {
-  color: inherit;
+  color: var(--primary);
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.page {
+  width: 90vw;
+  max-width: calc(var(--media-notebook) - 40px);
+  margin: 0 auto;
+
+  &--spaced {
+    margin: var(--spacing-lg) auto;
+  }
 }

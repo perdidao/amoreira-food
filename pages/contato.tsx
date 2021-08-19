@@ -1,17 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-const Home: NextPage = () => {
+const Contato: NextPage = () => {
   return (
-    <div className="page">
+    <div className="page page--spaced">
       <Head>
-        <title>Amoreira Food</title>
+        <title>Contato | Amoreira Food</title>
         <meta name="description" content="Teste de aplicação para cardápios" />
       </Head>
 
-      <p>Amoreira Food</p>
+      <p>Contato</p>
     </div>
   )
 }
 
-export default Home
+export default Contato

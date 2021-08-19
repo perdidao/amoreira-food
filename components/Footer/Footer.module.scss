@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  border-top: 1px solid var(--silver);
+  padding: var(--spacing-sm) 0;
+
+  &__container {
+    width: 90vw;
+    max-width: calc(var(--media-notebook) - 40px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
