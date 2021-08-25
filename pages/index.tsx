@@ -1,6 +1,8 @@
-import { Filters } from '@components/Filters/Filters'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+
+// Components
+import { Categories } from '@components/Categories/Categories'
 
 const Home: NextPage = () => {
   return (
@@ -10,8 +12,8 @@ const Home: NextPage = () => {
         <meta name="description" content="Teste de aplicação para cardápios" />
       </Head>
 
-      <p>Amoreira Food</p>
-      <Filters />
+      {/* Content */}
+      <Categories />
     </div>
   )
 }
