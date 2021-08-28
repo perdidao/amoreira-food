@@ -10,30 +10,22 @@ import Image from 'next/image'
 
 const StoreUnique: NextPage = () => {
   const router = useRouter()
-  const [stores, setStores] = useState<Store[]>()
   const [currentStore, setCurrentStore] = useState<Store>()
 
   const {
     query: { slug },
   } = router
 
-  const _fetchStores = (): void => {
-    Axios.get('/api/stores').then((response) => {
-      setStores(response.data)
+  const _fetchStore = (): void => {
+    Axios.get(`/api/stores/${slug}`).then((response) => {
+      setCurrentStore(response.data)
     })
   }
 
   useEffect(() => {
-    if (stores) return
-    _fetchStores()
-  }, [stores])
-
-  useEffect(() => {
-    if (!stores) return
-
-    const selected = stores.filter((store) => store.slug === slug)
-    setCurrentStore(selected[0])
-  }, [stores, slug])
+    if (currentStore) return
+    _fetchStore()
+  })
 
   return (
     <div className="page page--spaced">

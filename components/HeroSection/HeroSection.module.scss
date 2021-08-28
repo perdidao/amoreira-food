@@ -4,8 +4,17 @@
   justify-content: space-around;
   margin-bottom: var(--spacing-xl);
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &_info {
     max-width: 25vw;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin-bottom: var(--spacing-lg);
+    }
 
     &__title {
       font-size: 4.6rem;
