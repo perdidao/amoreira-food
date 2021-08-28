@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 // Components
-import { Categories } from '@components/Categories/Categories'
+import { CategoryList } from '@components/CategoryList/CategoryList'
 import { HeroSection } from '@components/HeroSection/HeroSection'
 import { StoreList } from '@components/StoreList/StoreList'
 
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
       {/* Content */}
       <HeroSection />
-      <Categories />
+      <CategoryList />
       <StoreList />
     </div>
   )

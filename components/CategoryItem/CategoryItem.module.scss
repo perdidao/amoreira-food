@@ -1,0 +1,25 @@
+.categoryItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 0;
+  border-radius: var(--spacing-md);
+  padding: var(--spacing-sm);
+  margin: 0;
+  background-image: linear-gradient(to right bottom, var(--ui-3), var(--ui-4));
+
+  &__title {
+    display: block;
+    margin-top: var(--spacing-sm);
+    text-align: center;
+    color: var(--ui-text);
+    font-size: var(--size-md);
+    font-weight: var(--weight-regular);
+  }
+
+  &__quantity {
+    color: var(--ui-title);
+    font-size: var(--size-sm);
+  }
+}
