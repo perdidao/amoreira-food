@@ -4,6 +4,7 @@ import Head from 'next/head'
 // Components
 import { Categories } from '@components/Categories/Categories'
 import { HeroSection } from '@components/HeroSection/HeroSection'
+import { StoreList } from '@components/StoreList/StoreList'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       {/* Content */}
       <HeroSection />
       <Categories />
+      <StoreList />
     </div>
   )
 }
