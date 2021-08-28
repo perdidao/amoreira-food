@@ -1,12 +1,17 @@
 :root {
   // Colors
-  --primary: #c33;
-  --secondary: #3cc;
-  --title: #212121;
-  --text: #444;
-  --gray: #999;
-  --silver: #ccc;
-  --washed: #eee;
+  --ui-1: #0c0c0e;
+  --ui-2: #201f25;
+  --ui-3: #212028;
+  --ui-4: #2d313d;
+  --ui-title: #c4c4c2;
+  --ui-text: #7d7d7f;
+  --ui-primary: #21c0aa;
+  --ui-secondary: #feb95a;
+
+  --ui-success: #21c0aa;
+  --ui-warning: #feb95a;
+  --ui-alert: #c05f56;
 
   // Font sizes
   --size-xxxs: 0.4rem;
@@ -52,11 +57,12 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  color: var(--text);
+  color: var(--ui-text);
+  background-color: var(--ui-1);
 }
 
 a {
-  color: var(--primary);
+  color: var(--ui-primary);
   text-decoration: none;
 }
 

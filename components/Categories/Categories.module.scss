@@ -5,9 +5,9 @@
 
   &__title {
     text-transform: uppercase;
-    color: var(--title);
+    color: var(--ui-title);
     font-weight: var(--weight-regular);
-    color: var(--primary);
+    color: var(--ui-primary);
     margin-bottom: var(--spacing-sm);
   }
 
@@ -27,7 +27,7 @@
     border-radius: var(--spacing-md);
     padding: var(--spacing-sm);
     margin: 0;
-    background-image: linear-gradient(to bottom, var(--washed), white);
+    background-color: var(--ui-2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   }
 
@@ -35,12 +35,13 @@
     display: block;
     margin-top: var(--spacing-sm);
     text-align: center;
-    color: var(--text);
+    color: var(--ui-text);
     font-size: var(--size-md);
+    font-weight: var(--weight-regular);
   }
 
   &__quantity {
-    color: var(--primary);
+    color: var(--ui-title);
     font-size: var(--size-sm);
   }
 }
