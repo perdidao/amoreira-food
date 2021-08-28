@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 // Components
 import { Categories } from '@components/Categories/Categories'
+import { HeroSection } from '@components/HeroSection/HeroSection'
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       {/* Content */}
+      <HeroSection />
       <Categories />
     </div>
   )

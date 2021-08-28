@@ -19,27 +19,24 @@ const Categories = (): JSX.Element => {
   }, [categories])
 
   return (
-    <section className={styles.categories}>
-      <h2 className={styles.categories__title}>Categorias</h2>
-      <nav className={styles.categories__list}>
-        {categories?.map((category) => (
-          <button key={category.slug} className={styles.categories__link}>
-            <Image
-              src={category.icon}
-              alt={category.title}
-              width={48}
-              height={48}
-            />
-            <strong className={styles.categories__name}>
-              {category.title}{' '}
-              <span className={styles.categories__quantity}>
-                ({category.totalItems})
-              </span>
-            </strong>
-          </button>
-        ))}
-      </nav>
-    </section>
+    <nav className={styles.categories}>
+      {categories?.map((category) => (
+        <button key={category.slug} className={styles.categories__link}>
+          <Image
+            src={category.icon}
+            alt={category.title}
+            width={48}
+            height={48}
+          />
+          <strong className={styles.categories__title}>
+            {category.title}{' '}
+            <span className={styles.categories__quantity}>
+              ({category.totalItems})
+            </span>
+          </strong>
+        </button>
+      ))}
+    </nav>
   )
 }
 

@@ -1,0 +1,30 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: var(--spacing-xl);
+
+  &_info {
+    max-width: 25vw;
+
+    &__title {
+      font-size: 4.6rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--ui-title);
+      font-weight: var(--weight-regular);
+      margin-bottom: var(--spacing-md);
+
+      & strong {
+        font-weight: var(--weight-regular);
+        color: var(--ui-secondary);
+        text-decoration: underline;
+      }
+    }
+
+    &__text {
+      font-size: var(--size-lg);
+      line-height: 1.5;
+    }
+  }
+}

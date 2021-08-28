@@ -20,9 +20,9 @@
   --size-sm: 0.8rem;
   --size-md: 1rem;
   --size-lg: 1.2rem;
-  --size-xl: 1.4rem;
-  --size-xxl: 1.5rem;
-  --size-xxxl: 1.6rem;
+  --size-xl: 1.5rem;
+  --size-xxl: 2rem;
+  --size-xxxl: 3rem;
 
   // Font weights
   --weight-regular: 400;
@@ -58,7 +58,9 @@ body {
   margin: 0;
   font-size: 16px;
   color: var(--ui-text);
-  background-color: var(--ui-1);
+  background: var(--ui-1) url('/assets/images/blob.svg') no-repeat -10vw -20vh;
+  background-size: 45vw;
+  background-attachment: fixed;
 }
 
 a {
