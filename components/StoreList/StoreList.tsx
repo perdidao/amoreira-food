@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import Axios from 'axios'
 
-import { Store } from '@models/stores'
+// Components
 import { StoreItem } from '@components/StoreItem/StoreItem'
 
+// Types
+import { Store } from '@models/stores'
+
+// Styles
 import styles from './StoreList.module.scss'
 
 const StoreList = (): JSX.Element => {

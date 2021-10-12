@@ -1,12 +1,16 @@
+import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
-import { useEffect, useState } from 'react'
-import { Store } from '@models/stores'
 
+// Nextjs related
 import type { NextPage } from 'next'
-import Head from 'next/head'
-
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+
+// Components
+import { CustomHead } from '@components/CustomHead/CustomHead'
+
+// Types
+import { Store } from '@models/stores'
 
 const StoreUnique: NextPage = () => {
   const router = useRouter()
@@ -29,10 +33,7 @@ const StoreUnique: NextPage = () => {
 
   return (
     <div className="page page--spaced">
-      <Head>
-        <title>{currentStore?.title} | Amoreira Food</title>
-        <meta name="description" content="Teste de aplicação para cardápios" />
-      </Head>
+      <CustomHead titlePrefix={currentStore?.title} />
 
       <h1>{currentStore?.title}</h1>
       <Image

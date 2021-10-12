@@ -1,8 +1,14 @@
-import Axios from 'axios'
 import { useEffect, useState } from 'react'
-import { Category } from '@models/categories'
-import styles from './CategoryList.module.scss'
+import Axios from 'axios'
+
+// Components
 import { CategoryItem } from '@components/CategoryItem/CategoryItem'
+
+// Types
+import { Category } from '@models/categories'
+
+// Styles
+import styles from './CategoryList.module.scss'
 
 const CategoryList = (): JSX.Element => {
   const [categories, setCategories] = useState<Category[]>()

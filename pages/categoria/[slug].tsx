@@ -1,12 +1,16 @@
+import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
-import { useEffect, useState } from 'react'
-import { Category } from '@models/categories'
 
+// Nextjs related
 import type { NextPage } from 'next'
-import Head from 'next/head'
-
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+
+// Components
+import { CustomHead } from '@components/CustomHead/CustomHead'
+
+// Types
+import { Category } from '@models/categories'
 
 const CategoryUnique: NextPage = () => {
   const router = useRouter()
@@ -37,10 +41,7 @@ const CategoryUnique: NextPage = () => {
 
   return (
     <div className="page page--spaced">
-      <Head>
-        <title>{currentCategory?.title} | Amoreira Food</title>
-        <meta name="description" content="Teste de aplicação para cardápios" />
-      </Head>
+      <CustomHead titlePrefix={currentCategory?.title} />
 
       <h1>
         <Image
