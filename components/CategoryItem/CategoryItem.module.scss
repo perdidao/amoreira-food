@@ -4,22 +4,22 @@
   justify-content: center;
   flex-direction: column;
   border: 0;
-  border-radius: var(--spacing-md);
-  padding: var(--spacing-sm);
+  border-radius: $spacing-md;
+  padding: $spacing-sm;
   margin: 0;
-  background-image: linear-gradient(to right bottom, var(--ui-3), var(--ui-4));
+  background-image: linear-gradient(to right bottom, $ui-3, $ui-4);
 
   &__title {
     display: block;
-    margin-top: var(--spacing-sm);
+    margin-top: $spacing-sm;
     text-align: center;
-    color: var(--ui-text);
-    font-size: var(--size-md);
-    font-weight: var(--weight-regular);
+    color: $ui-text;
+    font-size: $size-md;
+    font-weight: $weight-regular;
   }
 
   &__quantity {
-    color: var(--ui-title);
-    font-size: var(--size-sm);
+    color: $ui-title;
+    font-size: $size-sm;
   }
 }

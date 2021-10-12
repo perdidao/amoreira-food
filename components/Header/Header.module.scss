@@ -1,10 +1,10 @@
 .header {
-  padding: var(--spacing-md) 0;
-  margin-bottom: var(--spacing-lg);
+  padding: $spacing-md 0;
+  margin-bottom: $spacing-lg;
 
   &__container {
     width: 90vw;
-    max-width: calc(var(--media-notebook) - 40px);
+    max-width: calc($media-notebook - 40px);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -19,12 +19,12 @@
 
   &__link {
     display: block;
-    margin-left: var(--spacing-lg);
+    margin-left: $spacing-lg;
   }
 
   &__active {
     display: block;
-    margin-left: var(--spacing-lg);
-    font-weight: var(--weight-bold);
+    margin-left: $spacing-lg;
+    font-weight: $weight-bold;
   }
 }

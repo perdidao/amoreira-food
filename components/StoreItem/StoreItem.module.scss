@@ -1,35 +1,35 @@
 .storeItem {
-  background-color: var(--ui-2);
-  border-radius: var(--spacing-md);
+  background-color: $ui-2;
+  border-radius: $spacing-md;
 
   &__logo {
-    border-radius: var(--spacing-md);
+    border-radius: $spacing-md;
     overflow: hidden;
   }
 
   &__info {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: $spacing-sm $spacing-md;
   }
 
   &__title {
-    font-size: var(--size-lg);
-    font-weight: var(--weight-regular);
-    color: var(--ui-title);
-    margin-bottom: var(--spacing-xs);
+    font-size: $size-lg;
+    font-weight: $weight-regular;
+    color: $ui-title;
+    margin-bottom: $spacing-xs;
   }
 
   &__status {
-    font-size: var(--size-sm);
-    font-weight: var(--weight-bold);
+    font-size: $size-sm;
+    font-weight: $weight-bold;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 
     &_opened {
-      color: var(--ui-success);
+      color: $ui-success;
     }
 
     &_closed {
-      color: var(--ui-error);
+      color: $ui-error;
     }
   }
 }

@@ -3,9 +3,9 @@
   grid-template-columns: repeat(7, 12%);
   justify-content: space-between;
   grid-gap: 20px;
-  margin: var(--spacing-md) 0;
+  margin: $spacing-md 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: $media-mobile) {
     grid-template-columns: repeat(3, 30%);
     grid-gap: 5%;
   }

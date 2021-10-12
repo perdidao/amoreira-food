@@ -1,0 +1,67 @@
+/* =========
+  FUNCTIONS
+*/
+@function vw($value, $base: 'desktop') {
+  @if $base == 'notebook' {
+    $base: 1500;
+  } @else if $base == 'mobile' {
+    $base: 320;
+  } @else {
+    $base: 1920;
+  }
+
+  @return #{($value * 100) / $base}vw;
+}
+
+/* =========
+  COLORS
+*/
+$ui-1: #0c0c0e;
+$ui-2: #201f25;
+$ui-3: #212028;
+$ui-4: #2d313d;
+$ui-title: #c4c4c2;
+$ui-text: #7d7d7f;
+$ui-primary: #feb95a;
+$ui-secondary: #21c0aa;
+
+$ui-success: #21c0aa;
+$ui-warning: #feb95a;
+$ui-error: #c05f56;
+
+/* =========
+  FONT RELATED
+*/
+$font-primary: 'Atkinson Hyperlegible', sans-serif;
+
+$size-xxxs: 0.4rem;
+$size-xxs: 0.5rem;
+$size-xs: 0.6rem;
+$size-sm: 0.8rem;
+$size-md: 1rem;
+$size-lg: 1.2rem;
+$size-xl: 1.5rem;
+$size-xxl: 2rem;
+$size-xxxl: 3rem;
+
+$weight-regular: 400;
+$weight-bold: 700;
+
+/* =========
+  SPACING
+*/
+$spacing-xs: vw(5);
+$spacing-sm: vw(10);
+$spacing-md: vw(20);
+$spacing-lg: vw(40);
+$spacing-xl: vw(80);
+$spacing-xxl: vw(100);
+$spacing-xxxl: vw(160);
+
+/* =========
+  SCREEN SIZES
+*/
+$media-mobile: 768px;
+$media-tablet: 1024px;
+$media-notebook: 1440px;
+$media-desktop: 1920px;
