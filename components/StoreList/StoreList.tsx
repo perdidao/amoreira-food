@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Axios from 'axios'
+import Axios, { AxiosResponse } from 'axios'
 
 // Components
 import { StoreItem } from '@components/StoreItem/StoreItem'
@@ -14,9 +14,9 @@ const StoreList = (): JSX.Element => {
   const [stores, setStores] = useState<Store[]>()
 
   const _fetchStores = (): void => {
-    Axios.get('/api/stores').then((response) => {
+    Axios.get('/api/stores').then((response: AxiosResponse) =>
       setStores(response.data)
-    })
+    )
   }
 
   useEffect(() => {
