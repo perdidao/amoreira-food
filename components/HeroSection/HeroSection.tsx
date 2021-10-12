@@ -1,4 +1,7 @@
+// Nextjs related
 import Image from 'next/image'
+
+// Styles
 import styles from './HeroSection.module.scss'
 
 const HeroSection = (): JSX.Element => {

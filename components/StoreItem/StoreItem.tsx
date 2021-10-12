@@ -1,10 +1,13 @@
 import Moment from 'moment'
+
+// Nextjs related
 import { useRouter } from 'next/router'
-
-import { Store as StoreProps } from '@models/stores'
-
 import Image from 'next/image'
 
+// Types
+import { Store as StoreProps } from '@models/stores'
+
+// Syles
 import styles from './StoreItem.module.scss'
 
 const StoreItem = (props: StoreProps): JSX.Element => {

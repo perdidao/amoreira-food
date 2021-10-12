@@ -1,9 +1,11 @@
+// Nextjs related
 import { useRouter } from 'next/router'
-
-import { Category } from '@models/categories'
-
 import Image from 'next/image'
 
+// Types
+import { Category } from '@models/categories'
+
+// Styles
 import styles from './CategoryItem.module.scss'
 
 const CategoryItem = (props: Category): JSX.Element => {

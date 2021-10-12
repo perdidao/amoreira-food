@@ -1,7 +1,10 @@
-import Link from 'next/link'
-import styles from './Header.module.scss'
+// Nextjs related
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Image from 'next/image'
+
+// Styles
+import styles from './Header.module.scss'
 
 const Header = (): JSX.Element => {
   const router = useRouter()

@@ -1,18 +1,22 @@
 import { useEffect, useState } from 'react'
-import Axios from 'axios'
+import Axios, { AxiosResponse } from 'axios'
 
-import { Store } from '@models/stores'
+// Components
 import { StoreItem } from '@components/StoreItem/StoreItem'
 
+// Types
+import { Store } from '@models/stores'
+
+// Styles
 import styles from './StoreList.module.scss'
 
 const StoreList = (): JSX.Element => {
   const [stores, setStores] = useState<Store[]>()
 
   const _fetchStores = (): void => {
-    Axios.get('/api/stores').then((response) => {
+    Axios.get('/api/stores').then((response: AxiosResponse) =>
       setStores(response.data)
-    })
+    )
   }
 
   useEffect(() => {
