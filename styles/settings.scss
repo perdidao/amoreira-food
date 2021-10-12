@@ -1,6 +1,8 @@
 /* =========
   FUNCTIONS
 */
+@use "sass:math";
+
 @function vw($value, $base: 'desktop') {
   @if $base == 'notebook' {
     $base: 1500;
@@ -10,7 +12,7 @@
     $base: 1920;
   }
 
-  @return #{($value * 100) / $base}vw;
+  @return #{math.div($value * 100, $base)}vw;
 }
 
 /* =========
