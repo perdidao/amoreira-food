@@ -20,7 +20,6 @@ export default function handler(
         'Sunday',
       ],
       categories: [1],
-      menuId: 0,
     },
   ])
 }

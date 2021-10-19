@@ -1,5 +1,4 @@
 export interface Menu {
-  id: number
   footnote: string
   sections: MenuSection[]
 }

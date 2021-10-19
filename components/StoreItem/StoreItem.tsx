@@ -1,8 +1,9 @@
-import Moment from 'moment'
-
 // Nextjs related
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+
+// Components
+import { WorkdayStatus } from '@components/WorkdayStatus/WorkdayStatus'
 
 // Types
 import { Store as StoreProps } from '@models/stores'
@@ -14,9 +15,6 @@ const StoreItem = (props: StoreProps): JSX.Element => {
   const router = useRouter()
 
   const { title, slug, workdays } = props
-
-  const day = Moment().format('dddd')
-  const isOpened = workdays.includes(day)
 
   const _handleRedirect = (): void => {
     router.push(`/restaurante/${slug}`)
@@ -32,18 +30,7 @@ const StoreItem = (props: StoreProps): JSX.Element => {
         height="200"
         className={styles.storeItem__logo}
       />
-      <div className={styles.storeItem__info}>
-        <h3 className={styles.storeItem__title}>{title}</h3>
-        <p
-          className={`${styles.storeItem__status} ${
-            isOpened
-              ? styles.storeItem__status_opened
-              : styles.storeItem__status_closed
-          }`}
-        >
-          {isOpened ? 'Aberto' : 'Fechado'}
-        </p>
-      </div>
+      <WorkdayStatus workdays={workdays} />
     </div>
   )
 }

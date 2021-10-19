@@ -1,3 +1,5 @@
+import { Menu } from './menus'
+
 export interface Store {
   title: string
   slug: string
@@ -5,5 +7,5 @@ export interface Store {
   whatsapp: string
   workdays: string[]
   categories: number[]
-  menuId: number
+  menu?: Menu
 }

@@ -1,0 +1,20 @@
+.storeHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &__image {
+    margin-right: vw(80);
+  }
+
+  &__title {
+    font-size: $size-xxxl;
+    font-weight: $weight-bold;
+    color: $ui-title;
+    margin: 0;
+  }
+
+  &__contact {
+    margin-top: $spacing-md;
+  }
+}

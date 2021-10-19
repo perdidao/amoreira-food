@@ -4,13 +4,14 @@ import Axios from 'axios'
 // Nextjs related
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 
 // Components
 import { CustomHead } from '@components/CustomHead/CustomHead'
+import { StoreHeader } from '@components/StoreHeader/StoreHeader'
 
 // Types
 import { Store } from '@models/stores'
+import { StoreMenu } from '@components/StoreMenu/StoreMenu'
 
 const StoreUnique: NextPage = () => {
   const router = useRouter()
@@ -31,22 +32,16 @@ const StoreUnique: NextPage = () => {
     _fetchStore()
   })
 
-  return (
-    <div className="page page--spaced">
-      <CustomHead titlePrefix={currentStore?.title} />
+  if (!currentStore) {
+    return <></>
+  }
 
-      <h1>{currentStore?.title}</h1>
-      <Image
-        src={`/assets/stores/${slug}.png`}
-        alt={currentStore?.title}
-        aria-hidden="true"
-        layout="intrinsic"
-        width="140"
-        height="140"
-      />
-      {currentStore?.phone}
-      {currentStore?.whatsapp}
-    </div>
+  return (
+    <main className="page page--spaced">
+      <CustomHead titlePrefix={currentStore?.title} />
+      <StoreHeader {...currentStore} />
+      <StoreMenu menu={currentStore.menu} />
+    </main>
   )
 }
 
