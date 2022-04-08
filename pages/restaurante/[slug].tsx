@@ -11,7 +11,6 @@ import { StoreHeader } from '@components/StoreHeader/StoreHeader'
 
 // Types
 import { Store } from '@models/stores'
-import { StoreMenu } from '@components/StoreMenu/StoreMenu'
 
 const StoreUnique: NextPage = () => {
   const router = useRouter()
@@ -38,9 +37,8 @@ const StoreUnique: NextPage = () => {
 
   return (
     <main className="page page--spaced">
-      <CustomHead titlePrefix={currentStore?.title} />
+      <CustomHead titlePrefix={currentStore?.name} />
       <StoreHeader {...currentStore} />
-      <StoreMenu menu={currentStore.menu} />
     </main>
   )
 }

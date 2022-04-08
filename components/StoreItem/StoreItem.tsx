@@ -14,7 +14,7 @@ import styles from './StoreItem.module.scss'
 const StoreItem = (props: StoreProps): JSX.Element => {
   const router = useRouter()
 
-  const { title, slug, workdays } = props
+  const { name, slug, workdays } = props
 
   const _handleRedirect = (): void => {
     router.push(`/restaurante/${slug}`)
@@ -24,13 +24,16 @@ const StoreItem = (props: StoreProps): JSX.Element => {
     <div className={styles.storeItem} onClick={(): void => _handleRedirect()}>
       <Image
         src={`/assets/stores/${slug}.png`}
-        alt={title}
+        alt={name}
         layout="intrinsic"
         width="200"
         height="200"
         className={styles.storeItem__logo}
       />
-      <WorkdayStatus workdays={workdays} />
+      <div className={styles.storeItem__info}>
+        <h3 className={styles.storeItem__title}>{name}</h3>
+        <WorkdayStatus workdays={workdays} />
+      </div>
     </div>
   )
 }

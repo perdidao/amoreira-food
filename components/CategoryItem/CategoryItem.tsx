@@ -10,7 +10,7 @@ import styles from './CategoryItem.module.scss'
 
 const CategoryItem = (props: Category): JSX.Element => {
   const router = useRouter()
-  const { slug, title, totalItems } = props
+  const { slug, title } = props
 
   const _handleRedirect = (): void => {
     router.push(`/categoria/${slug}`)
@@ -27,10 +27,7 @@ const CategoryItem = (props: Category): JSX.Element => {
         width={48}
         height={48}
       />
-      <strong className={styles.categoryItem__title}>
-        {title}{' '}
-        <span className={styles.categoryItem__quantity}>({totalItems})</span>
-      </strong>
+      <strong className={styles.categoryItem__title}>{title} </strong>
     </button>
   )
 }

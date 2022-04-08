@@ -8,6 +8,7 @@
   padding: $spacing-sm;
   margin: 0;
   background-image: linear-gradient(to right bottom, $ui-3, $ui-4);
+  cursor: pointer;
 
   &__title {
     display: block;

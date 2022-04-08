@@ -1,11 +1,9 @@
-import { Menu } from './menus'
-
 export interface Store {
-  title: string
+  id: number
+  name: string
   slug: string
   phone: string
   whatsapp: string
+  address: string
   workdays: string[]
-  categories: number[]
-  menu?: Menu
 }

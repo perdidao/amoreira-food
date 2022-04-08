@@ -1,3 +1,4 @@
+import db from '@datasource/db'
 import { Store } from '@models/stores'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
@@ -5,21 +6,9 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Store[]>
 ): void {
-  res.status(200).json([
-    {
-      title: 'KM Burguer',
-      slug: 'km-burguer',
-      phone: '(43) 99925-4045',
-      whatsapp: '(43) 99904-5642',
-      workdays: [
-        'Monday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      categories: [1],
-    },
-  ])
+  db.query('SELECT * from stores', (error: unknown, results: Store[]) => {
+    if (error) throw error
+
+    res.status(200).json(results)
+  })
 }

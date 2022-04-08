@@ -18,9 +18,10 @@
       "@styles/*": ["styles/*"],
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
-      "@models/*": ["models/*"]
+      "@models/*": ["models/*"],
+      "@datasource/*": ["datasource/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "datasource/db.js"],
   "exclude": ["node_modules"]
 }
